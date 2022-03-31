@@ -16,4 +16,7 @@
     justify-content: center;
 }
 .cell{
+    border: 1px solid black;
+    height:var(--cell-size);
+    width:var(--cell-size);
 }
