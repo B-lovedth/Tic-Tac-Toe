@@ -20,4 +20,7 @@
     border: 5px solid black;
     height:var(--cell-size);
     width:var(--cell-size);
+    display: grid;
+    justify-content: center;
+    align-items:center;
 }
