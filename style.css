@@ -23,6 +23,7 @@
     display: grid;
     justify-items: center;
     align-items:center;
+    position:relative;
 }
 .cell:first-child,.cell:nth-child(2),.cell:nth-child(3){
     border-top:none;
@@ -38,3 +39,32 @@
 .cell:nth-child(7) {
     border-bottom:none;
 }
+.cell.x::before,
+.cell.x::after{
+    content:'';
+    position:absolute;
+    height:var(--mark-size);
+    width:calc(var(--mark-size)*.15);
+    background: #333;
+}
+.cell.x::before{
+    transform:rotate(45deg);
+}
+.cell.x::after{
+    transform:rotate(-45deg);
+}
+.cell.o::before,
+.cell.o::after{
+    content:'';
+    position:absolute;
+    height:var(--mark-size);
+    width:var(--mark-size);
+    border-radius:50%;
+    background: #333;
+}
+.cell.o::before{
+    scale: 0.75;
+    background: #fff;
+    z-index:1
+}
+
