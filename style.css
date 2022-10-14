@@ -99,7 +99,33 @@ body {
     background: var(--background);
     z-index:1
 }
-
+.message-container{
+    position:fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    background:#333333df;
+    z-index:10;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+button#restart {
+    padding: 0.7rem 3rem;
+    font-size: 2rem;
+    letter-spacing: 4px;
+    border: 1px solid #FFF;
+    background: transparent;
+    color: #fff;
+    cursor:pointer;
+    margin-top:1rem;
+    border-radius:10px;
+    transition:0.3s cubic-bezier(0.77, 0, 0.175, 1);
+}
+button#restart:active {
+    scale:0.3;
+}
 @media (max-width:500px) {
     .board{
         scale:0.7;
