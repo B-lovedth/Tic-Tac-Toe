@@ -4,9 +4,14 @@
     padding:0;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+
 :root{
     --cell-size:10rem;
     --mark-size:calc(var(--cell-size) * .9);
+    --background:#f1f0f6;
+}
+body {
+    background: var(--background);
 }
 .board{
     width:100vw;
@@ -16,14 +21,33 @@
     align-content: center;
     justify-content: center;
 }
+.board.x .cell:not(.x):not(.o):hover::before,
+.board.x .cell:not(.x):not(.o):hover::after{
+    content: '';
+    position: absolute;
+    height: var(--mark-size);
+    width: calc(var(--mark-size)*.15);
+    background: #ffbebe;
+}
+.board.o .cell:not(.x):not(.o):hover::before,
+.board.o .cell:not(.x):not(.o):hover::after{
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    height: var(--mark-size);
+    width: var(--mark-size);
+    background: #a3a2c4;
+}
+
 .cell{
-    border: 5px solid black;
+    border: 5px solid #3a3a3a;
     height:var(--cell-size);
     width:var(--cell-size);
     display: grid;
     justify-items: center;
     align-items:center;
     position:relative;
+    cursor:pointer;
 }
 .cell:first-child,.cell:nth-child(2),.cell:nth-child(3){
     border-top:none;
@@ -39,32 +63,45 @@
 .cell:nth-child(7) {
     border-bottom:none;
 }
+.cell.x:hover,
+.cell.o:hover{
+    cursor:not-allowed;
+}
 .cell.x::before,
 .cell.x::after{
     content:'';
     position:absolute;
     height:var(--mark-size);
     width:calc(var(--mark-size)*.15);
-    background: #ff7a00;
+    background: #ff0000;
 }
+.board.x .cell:hover::before,
 .cell.x::before{
     transform:rotate(45deg);
 }
+.board.x .cell:hover::after,
 .cell.x::after{
     transform:rotate(-45deg);
 }
 .cell.o::before,
-.cell.o::after{
+.cell.o::after
+{
     content:'';
     position:absolute;
     height:var(--mark-size);
     width:var(--mark-size);
     border-radius:50%;
-    background: #ff0000;
+    background: #0081ff;
 }
+.board.o .cell:not(.x):not(.o):hover::before,
 .cell.o::before{
     scale: 0.75;
-    background: #fff;
+    background: var(--background);
     z-index:1
 }
 
+@media (max-width:500px) {
+    .board{
+        scale:0.7;
+    }
+}
