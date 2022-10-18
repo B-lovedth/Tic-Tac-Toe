@@ -27,3 +27,13 @@ const handleClick = (e) => {
 const placeMark = (cell,currentClass) => {
     cell.classList.add(currentClass)
 }
+const setBoardHoverClass=()=>{
+    board.classList.remove(x_class)
+    board.classList.remove(o_class)
+    if (o_turn) {
+    board.classList.add(o_class);
+    } else {
+    board.classList.add(x_class);
+        
+    }
+}
