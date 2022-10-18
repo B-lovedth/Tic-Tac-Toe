@@ -27,7 +27,7 @@ body {
     position: absolute;
     height: var(--mark-size);
     width: calc(var(--mark-size)*.15);
-    background: #ffbebe;
+    background: #737373;
 }
 .board.o .cell:not(.x):not(.o):hover::before,
 .board.o .cell:not(.x):not(.o):hover::after{
