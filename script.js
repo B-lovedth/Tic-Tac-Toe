@@ -24,3 +24,6 @@ const handleClick = (e) => {
     }
   console.log("clicked");
 };
+const placeMark = (cell,currentClass) => {
+    cell.classList.add(currentClass)
+}
