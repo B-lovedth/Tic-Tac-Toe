@@ -91,7 +91,7 @@ body {
     height:var(--mark-size);
     width:var(--mark-size);
     border-radius:50%;
-    background: #0081ff;
+    background: #000000;
 }
 .board.o .cell:not(.x):not(.o):hover::before,
 .cell.o::before{
@@ -100,6 +100,7 @@ body {
     z-index:1
 }
 .message-container{
+    display:none;
     position:fixed;
     color: #fff;
     top:0;
@@ -108,7 +109,6 @@ body {
     right:0;
     background:#333333df;
     z-index:10;
-    display:flex;
     justify-content: center;
     align-items:center;
 }
