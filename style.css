@@ -139,6 +139,10 @@ button#restart {
     border-radius:10px;
     transition:0.3s cubic-bezier(0.77, 0, 0.175, 1);
 }
+button#restart:hover{
+    background:#FFF;
+    color:#3a3a3a;
+}
 button#restart:active {
     scale:0.3;
 }
