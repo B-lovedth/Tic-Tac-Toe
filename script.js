@@ -43,3 +43,10 @@ const startGame = () => {
   });
   setBoardHoverClass();
 };
+const checkWin = (currentClass) => {
+    return winningCombination.some(combination => {
+        return combination.every(index => {
+            return  cellElements[index]
+        })
+    })
+}
