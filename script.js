@@ -13,6 +13,7 @@ const winningCombination = [
     [0, 4, 8],
     [2, 4, 6]
 ]
+
 const handleClick = (e) => {
     const cell = e.target;
     let currentClass = o_turn ? o_class : x_class;
@@ -24,6 +25,7 @@ const handleClick = (e) => {
     }
   console.log("clicked");
 };
+
 const placeMark = (cell,currentClass) => {
     cell.classList.add(currentClass)
 }
@@ -43,6 +45,7 @@ const startGame = () => {
   });
   setBoardHoverClass();
 };
+startGame();
 const checkWin = (currentClass) => {
     return winningCombination.some(combination => {
         return combination.every(index => {
