@@ -13,3 +13,14 @@ const winningCombination = [
     [0, 4, 8],
     [2, 4, 6]
 ]
+const handleClick = (e) => {
+    const cell = e.target;
+    let currentClass = o_turn ? o_class : x_class;
+    placeMark(cell, currentClass);
+    o_turn = !o_turn;
+    setBoardHoverClass();    
+    if (checkWin(currentClass)) {
+        
+    }
+  console.log("clicked");
+};
