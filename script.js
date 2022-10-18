@@ -1,3 +1,8 @@
+const cellElements = document.querySelectorAll('[data-cell]')
+const board = document.getElementById('board')
+const x_class = 'x'
+const o_class = "o"
+let o_turn = false;
 const winningCombination = [
     [0, 1, 2],
     [3, 4, 5],
