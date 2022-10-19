@@ -75,6 +75,8 @@ const startGame = () => {
   setBoardHoverClass();
 };
 startGame();
+
+
 const checkWin = (currentClass) => {
   return winningCombination.some((combination) => {
     return combination.every((index) => {
