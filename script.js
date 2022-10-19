@@ -38,7 +38,7 @@ const endGame = (draw) => {
     if (draw===true) {
     message.textContent = `Draw!`;
   } else {
-    message.textContent = `${o_turn ? "X's" : "O's"} Win!`;
+    message.textContent = `${o_turn ? "O's" : "X's"} Win!`;
     }
 };
 
