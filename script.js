@@ -25,9 +25,9 @@ const handleClick = (e) => {
   } else if (isDraw()) {
     endGame(true)
   } else {
-    o_turn = !o_turn;
+      o_turn = !o_turn;
+      setBoardHoverClass();
     }
-    setBoardHoverClass();
     
   console.log("clicked");
 };
