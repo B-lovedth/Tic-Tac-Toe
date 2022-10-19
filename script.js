@@ -31,9 +31,11 @@ const handleClick = (e) => {
     
     console.log(Boolean(o_turn))
 };
+
+
 const endGame = (draw) => {
       messageContainer.classList.add("show");
-    if (draw) {
+    if (draw===true) {
     message.textContent = `Draw!`;
   } else {
     message.textContent = `${o_turn ? "X's" : "O's"} Win!`;
