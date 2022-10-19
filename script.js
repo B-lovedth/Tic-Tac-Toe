@@ -55,6 +55,8 @@ const isDraw = () => {
 const placeMark = (cell, currentClass) => {
   cell.classList.add(currentClass);
 };
+
+
 const setBoardHoverClass = () => {
   board.classList.remove(x_class);
   board.classList.remove(o_class);
