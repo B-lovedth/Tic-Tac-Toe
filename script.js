@@ -20,20 +20,24 @@ const handleClick = (e) => {
   const cell = e.target;
   let currentClass = o_turn ? o_class : x_class;
   placeMark(cell, currentClass);
-  o_turn = !o_turn;
-  setBoardHoverClass();
   if (checkWin(currentClass)) {
     endGame(false);
-  }
+  } else if (isDraw()) {
+    endGame(true)
+  } else {
+    o_turn = !o_turn;
+    }
+    setBoardHoverClass();
+    
   console.log("clicked");
 };
 const endGame = (draw) => {
-  if (draw) {
+      messageContainer.classList.add("show");
+    if (draw) {
+    message.textContent = `Draw!`;
   } else {
-    messageContainer.classList.add("show");
-    }
     message.textContent = `${o_turn ? "X's" : "O's"} Win!`;
-    
+    }
 };
 
 const placeMark = (cell, currentClass) => {
