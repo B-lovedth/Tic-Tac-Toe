@@ -4,6 +4,7 @@ const x_class = "x";
 const o_class = "o";
 const messageContainer = document.querySelector("#message-container");
 const message = document.querySelector("[message-text]");
+const  restart =  document.querySelector('#restart')
 let o_turn;
 const winningCombination = [
   [0, 1, 2],
