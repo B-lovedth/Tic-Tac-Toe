@@ -71,8 +71,11 @@ const setBoardHoverClass = () => {
 const startGame = () => {
   cellElements.forEach((cell) => {
     cell.addEventListener("click", handleClick, { once: true });
+    cell.classList.remove(o_class);
+    cell.classList.remove(x_class);
   });
-  setBoardHoverClass();
+    setBoardHoverClass();
+    messageContainer.classList.remove("show");   
 };
 startGame();
 restart.addEventListener("click", startGame);
