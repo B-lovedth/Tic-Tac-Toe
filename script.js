@@ -42,6 +42,16 @@ const endGame = (draw) => {
     }
 };
 
+
+const isDraw = () => {
+  return [...cellElements].every(cell => {
+        return (
+          cell.classList.contains(o_class) || cell.classList.contains(x_class)
+        );
+    })
+}
+
+
 const placeMark = (cell, currentClass) => {
   cell.classList.add(currentClass);
 };
