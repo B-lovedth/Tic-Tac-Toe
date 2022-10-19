@@ -29,7 +29,7 @@ const handleClick = (e) => {
       setBoardHoverClass();
     }
     
-  console.log("clicked");
+    console.log(Boolean(o_turn))
 };
 const endGame = (draw) => {
       messageContainer.classList.add("show");
