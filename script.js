@@ -16,7 +16,6 @@ const winningCombination = [
   [0, 4, 8],
   [2, 4, 6],
 ];
-restart.addEventListener("click",startGame)
 const handleClick = (e) => {
   const cell = e.target;
   let currentClass = o_turn ? o_class : x_class;
@@ -76,6 +75,7 @@ const startGame = () => {
   setBoardHoverClass();
 };
 startGame();
+restart.addEventListener("click", startGame);
 
 
 const checkWin = (currentClass) => {
