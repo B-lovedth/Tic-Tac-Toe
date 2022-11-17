@@ -54,7 +54,8 @@ body {
 }
 
 .cell{
-    border: 5px solid #3a3a3a;
+    border: 5px #3a3a3a;
+    border-style:double;
     height:var(--cell-size);
     width:var(--cell-size);
     display: grid;
@@ -162,6 +163,9 @@ button#restart:active {
 }
 .creator {
     display: flex;
+    position: absolute;
+    bottom: 2%;
+    width: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
